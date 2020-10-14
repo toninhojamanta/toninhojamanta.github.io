@@ -31,7 +31,6 @@ iframe {
     animation-fill-mode: forwards;
     position: absolute;
     margin: 50px;
-    border: 4px solid black;
 }
 
 #clock {
