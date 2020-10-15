@@ -3,10 +3,11 @@ const clock_div = document.getElementById('clock_div');
 const clock_p = document.querySelector('#clock_p');
 const daysLeft_p = document.querySelector('#daysleft');
 
-clock();
+
+isItTheDay()
 
 function isItTheDay() {
-    let now = {
+    const now = {
         'month': new Date().getMonth(),
         'day': new Date().getDate(),
     };
@@ -18,27 +19,20 @@ function isItTheDay() {
 
     if (day['month'] === now['month'] && day['day'] === now['day']) {
         boolean_h1.innerHTML = 'É'.fontcolor('blue');
-    } else {
+        document.querySelector('header').style.boxShadow = "0 0 75px blue";
+    } else { 
         boolean_h1.innerHTML = 'NÃO É'.fontcolor('red');
-    }
+        document.querySelector('header').style.boxShadow = "0 0 75px red";
 
-    if (now.month > day.month || now.month === day.month && now.day > day.day) {
-        return true;
-    } else {
-        return false;
-    }
-
-}
-function isItDecember() {
-    if (now.month > day.month || now.month === day.month && now.day > day.day) {
-        return true;
-    } else {
-        return false;
+        clock(willBeNegative(now, day));
     }
 }
 
-function clock() {
-    let yearPlusOne = isItTheDay();
+function willBeNegative(now, day) {
+    return (now.month > day.month || now.month === day.month && now.day > day.day);
+}
+
+function clock(yearPlusOne) {
 
     setInterval(function() {
         let internationalDay;
@@ -57,8 +51,8 @@ function clock() {
             'secs': Math.floor(distance % (1000 * 60) / 1000),
         };
 
-        clock_p.innerHTML = `${addZeroOrNot(interval.hours.toString())}:${addZeroOrNot(interval.mins.toString())}:${addZeroOrNot(interval.secs.toString())}`;
         daysLeft_p.innerHTML = `${interval.days.toString()} dias`;
+        clock_p.innerHTML = `${addZeroOrNot(interval.hours.toString())}:${addZeroOrNot(interval.mins.toString())}:${addZeroOrNot(interval.secs.toString())}`;
     }, 1000);
 
 }
