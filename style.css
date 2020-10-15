@@ -14,13 +14,15 @@
 }
 
 body {
-    background: #282C34;
+    background-image: linear-gradient(to right, #181C24, #080C14);
+    color: black;
+    mix-blend-mode: difference;
     font-family: Arial, Helvetica, sans-serif;
 }
 
 header {
     font-size: 25px;
-    background: white;
+    background-image: linear-gradient(to right, #ffffff, #dddddd);
     padding: 10px;
     text-align: center;
 }
@@ -31,6 +33,10 @@ iframe {
     animation-fill-mode: forwards;
     position: absolute;
     margin: 50px;
+}
+
+#video-div {
+    position: relative;
 }
 
 #clock {
@@ -44,8 +50,5 @@ iframe {
     padding: 25px;
     font-size: 90px;
     color: white;
-}
-
-#video-button-div {
-    position: relative;
+    mix-blend-mode: difference;
 }
