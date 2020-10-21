@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
             clock_div.style.padding = "0"
         } else {
             clock_div.style.marginTop = "4%"
-            clock_div.style.marginRight = "7%"
+            clock_div.style.marginRight = "60%"
         }
     }, 100)
 })
