@@ -5,7 +5,7 @@ const daysLeft_p = document.querySelector('#daysleft');
 
 document.addEventListener("DOMContentLoaded", () => {
     setInterval(() => {
-        if (1.5 * visualViewport.height > visualViewport.width) {
+        if (1.75 * visualViewport.height > visualViewport.width) {
             clock_div.style.marginTop = "75%"
             clock_div.style.marginRight = "10px"
             clock_div.style.padding = "0"
