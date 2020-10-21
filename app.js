@@ -1,8 +1,20 @@
 const boolean_h1 = document.querySelector('h1 > span');
-const clock_div = document.getElementById('clock_div');
+const clock_div = document.getElementById('clock');
 const clock_p = document.querySelector('#clock_p');
 const daysLeft_p = document.querySelector('#daysleft');
 
+document.addEventListener("DOMContentLoaded", () => {
+    setInterval(() => {
+        if (1.5 * visualViewport.height > visualViewport.width) {
+            clock_div.style.marginTop = "75%"
+            clock_div.style.marginRight = "10px"
+            clock_div.style.padding = "0"
+        } else {
+            clock_div.style.marginTop = "4%"
+            clock_div.style.marginRight = "7%"
+        }
+    }, 100)
+})
 
 isItTheDay()
 
@@ -36,11 +48,12 @@ function clock(yearPlusOne) {
 
     setInterval(function() {
         let internationalDay;
+        const intDate = '11-19'
         let now = Date.parse(new Date());
         if (yearPlusOne) {
-            internationalDay = Date.parse(`11-19-${new Date().getFullYear()+1}`);
+            internationalDay = Date.parse(`${intDate}-${new Date().getFullYear()+1}`);
         } else {
-            internationalDay = Date.parse(`11-19-${new Date().getFullYear()}`);
+            internationalDay = Date.parse(`${intDate}-${new Date().getFullYear()}`);
         }
         let distance = internationalDay - now;
         
