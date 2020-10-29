@@ -3,19 +3,6 @@ const clock_div = document.getElementById('clock');
 const clock_p = document.querySelector('#clock_p');
 const daysLeft_p = document.querySelector('#daysleft');
 
-document.addEventListener("DOMContentLoaded", () => {
-    setInterval(() => {
-        if (1.75 * visualViewport.height > visualViewport.width) {
-            clock_div.style.marginTop = "75%"
-            clock_div.style.marginRight = "10px"
-            clock_div.style.padding = "0"
-        } else {
-            clock_div.style.marginTop = "4%"
-            clock_div.style.marginRight = "60%"
-        }
-    }, 100)
-})
-
 isItTheDay()
 
 function isItTheDay() {
