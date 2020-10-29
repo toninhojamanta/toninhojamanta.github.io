@@ -14,6 +14,7 @@
 }
 
 body {
+    width: 100%;
     background-image: linear-gradient(to right, #181C24, #080C14);
     color: black;
     mix-blend-mode: difference;
@@ -21,6 +22,7 @@ body {
 }
 
 header {
+    width: 100%;
     font-size: 25px;
     background-image: linear-gradient(to right, #ffffff, #dddddd);
     padding: 10px;
