@@ -72,6 +72,9 @@ const getTimeUntilNationalDate = () => {
     changeBool('NÃO É');
     changeHeaderColor('red', '0 0 75px red');
 
+    const hoursLeftOutPut = getHoursLeftOutput();
+    hoursLeft.innerHTML = hoursLeftOutPut;
+    
     clearInterval();
     setInterval(() => {
         const hoursLeftOutPut = getHoursLeftOutput();
