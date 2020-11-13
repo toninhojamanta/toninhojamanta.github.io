@@ -51,7 +51,6 @@ const internationalDay = '19';
 const internationalMonth = '11';
 
 const getTimeUntilNationalDate = () => {
-
     const now = getDayOfTheYear(new Date());
     const day = getDayOfTheYear(new Date(`${internationalMonth}-${internationalDay}-${getNationalYear(internationalMonth, internationalDay)}`));
     const result = day - now;
@@ -74,11 +73,11 @@ const getTimeUntilNationalDate = () => {
 
     const hoursLeftOutPut = getHoursLeftOutput();
     hoursLeft.innerHTML = hoursLeftOutPut;
-    
+
     clearInterval();
     setInterval(() => {
-        const hoursLeftOutPut = getHoursLeftOutput();
-        hoursLeft.innerHTML = hoursLeftOutPut;
-    }, 1000);
+        getTimeUntilNationalDate();
+    }, 500);
 };
+
 getTimeUntilNationalDate();
