@@ -58,7 +58,7 @@ const getTimeUntilNationalDate = () => {
     if (result > 1) {
         daysLeft.innerHTML = `Faltam: ${result} dias`;
     } else if (result === 1) {
-        daysLeft.innerHTML = `Faltam: ${result} dia`;
+        daysLeft.innerHTML = `Falta: ${result} dia`;
     } else if (result === -1) {
         displayDayEvent();
         return;
