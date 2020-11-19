@@ -38,7 +38,8 @@ const getHoursLeftOutput = () => {
 const displayDayEvent = () => {
     changeHeaderColor('green', '0 0 75px green');
     changeBool('É');
-    timeLeft.innerHTML = `De um tapa no Toni<br>mais perto de você!`.fontcolor('green');
+    timeLeft.innerHTML = `<p>De um tapa no Toni</p>
+                          <p>mais perto de você!</p>`.fontcolor('green');
 };
 
 const getNationalYear = (month, day) => {
