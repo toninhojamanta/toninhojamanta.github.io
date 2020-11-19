@@ -51,6 +51,7 @@ p {
     animation-name: fade;
     animation-duration: 4s;
     animation-fill-mode: forwards;
+    text-align: center;
 }
 
 .container {
