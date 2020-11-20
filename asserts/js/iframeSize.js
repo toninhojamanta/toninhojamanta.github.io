@@ -6,6 +6,4 @@ setInterval(() => {
     } else {
         iframe.style.height = `${screen.height / 2}px`;
     }
-    iframe.style.minWidth = screen.width * 0.4;
-    iframe.style.maxWidth = screen.width;
 });
