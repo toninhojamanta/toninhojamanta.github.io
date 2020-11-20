@@ -58,14 +58,14 @@ const getTimeUntilNationalDate = () => {
     const result = day - now;
 
     if (result > 1) {
-        daysLeft.innerHTML = `Faltam: ${result} dias`;
+        daysLeft.innerHTML = `Faltam ${result} dias`;
     } else if (result === 1) {
-        daysLeft.innerHTML = `Falta: ${result} dia`;
+        daysLeft.innerHTML = `Falta ${result} dia`;
     } else if (result === -1) {
         displayDayEvent();
         return;
     } else if (result < 0) {
-        daysLeft.innerHTML = `Faltam: ${result + 365} dias`;
+        daysLeft.innerHTML = `Faltam ${result + 365} dias`;
     } else if (result === 0) {
         daysLeft.innerHTML = 'Falta apenas:';
     }
