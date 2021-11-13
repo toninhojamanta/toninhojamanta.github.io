@@ -55,7 +55,7 @@ const internationalMonth = '11';
 const getTimeUntilNationalDate = () => {
     const now = getDayOfTheYear(new Date());
     const day = getDayOfTheYear(new Date(`${internationalMonth}-${internationalDay}-${getNationalYear(internationalMonth, internationalDay)}`));
-    const result = day - now;
+    const result = day - now - 1;
 
     if (result > 1) {
         daysLeft.innerHTML = `Faltam ${result} dias`;
